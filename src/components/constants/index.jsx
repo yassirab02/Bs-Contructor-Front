@@ -11,8 +11,14 @@ import user1 from "../../assets/user1.jpg";
 export const navItems = [
   { label: "Features", href: "#" },
   { label: "Workflow", href: "#" },
-  { label: "Pricing", href: "#" },
+  { label: "Services", href: "#" },
   { label: "Testimonials", href: "#" },
+];
+
+export const serviceItems = [
+  { label: "Service 1", href: "#" },
+  { label: "Service 2", href: "#" },
+  { label: "Service 3", href: "#" },
 ];
 
 export const testimonials = [

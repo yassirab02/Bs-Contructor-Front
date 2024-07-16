@@ -1,13 +1,29 @@
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { IonIcon } from '@ionic/react';
 import logo from "../assets/Bs-logo.jpg";
-import { navItems } from "./constants";
+import { navItems, serviceItems } from "./constants";
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const [serviceMenuOpen, setServiceMenuOpen] = useState(false);
+  const serviceMenuTimer = useRef(null);
 
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
+  };
+
+  const handleMouseEnter = () => {
+    if (serviceMenuTimer.current) {
+      clearTimeout(serviceMenuTimer.current);
+    }
+    setServiceMenuOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    serviceMenuTimer.current = setTimeout(() => {
+      setServiceMenuOpen(false);
+    }, 200); // Delay of 0.2 seconds
   };
 
   return (
@@ -20,8 +36,30 @@ const Navbar = () => {
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">
             {navItems.map((item, index) => (
-              <li key={index}>
-                <a href={item.href} className="hover:text-orange-600">{item.label}</a>
+              <li
+                key={index}
+                className="relative"
+                onMouseEnter={item.label === "Services" ? handleMouseEnter : null}
+                onMouseLeave={item.label === "Services" ? handleMouseLeave : null}
+              >
+                <a href={item.href} className="hover:text-orange-600 flex items-center">
+                  {item.label}
+                  {item.label === "Services" && (
+                    <IonIcon 
+                      name={serviceMenuOpen ? "chevron-up-outline" : "chevron-down-outline"} 
+                      className="ml-2 mt-1"
+                    />
+                  )}
+                </a>
+                {item.label === "Services" && serviceMenuOpen && (
+                  <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-32 bg-white/55 border border-gray-200 rounded-lg shadow-lg">
+                    {serviceItems.map((service, idx) => (
+                      <li key={idx} className="px-4 py-2 hover:bg-orange-500 rounded-lg">
+                        <a href={service.href} className="block text-gray-700">{service.label}</a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
@@ -64,3 +102,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

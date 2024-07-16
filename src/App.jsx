@@ -13,10 +13,10 @@ function App() {
     <>
       <Navbar />
       <Hero/>
-      <Contact />
-      <Formule />
       <Workflow/>
       <Reviews/>  
+      <Contact />
+      <Formule />
       <Footer/>
     </>
   );
