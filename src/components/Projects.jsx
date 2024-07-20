@@ -10,7 +10,7 @@ import Title from './Title';
 const Projects = () => {
   return (
    <>
-   <Title text="Here some of our projects"/>
+   <Title text="Here some of our Projects"/>
      <Carousel 
         img1={img1} 
         img2={img2} 
