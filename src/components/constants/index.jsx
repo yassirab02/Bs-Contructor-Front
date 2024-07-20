@@ -9,16 +9,20 @@ import user1 from "../../assets/user1.jpg";
 
 
 export const navItems = [
-  { label: "Features", href: "#" },
-  { label: "Workflow", href: "#" },
-  { label: "Services", href: "#" },
-  { label: "Testimonials", href: "#" },
+  { label: "Home", href: "/home" },
+  { label: "Workflow", href: "/workflow" },
+  { label: "Services", href: "/services" },
+  { label: "Projects", href: "/projects" },
+  { label: "About", href: "/about" },
 ];
 
 export const serviceItems = [
-  { label: "Service 1", href: "#" },
-  { label: "Service 2", href: "#" },
-  { label: "Service 3", href: "#" },
+  { label: "Interior design", href: "#" },
+  { label: "Pool construction", href: "#" },
+  { label: "House construction", href: "#" },
+  { label: "Home remodeling", href: "#" },
+  { label: "House renovation", href: "#" },
+  { label: "Project management", href: "#" },
 ];
 
 export const testimonials = [

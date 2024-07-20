@@ -58,38 +58,22 @@ const Hero = () => {
             ))}
           </span>
         </motion.h1>
-        {/* <p className="mt-10 text-lg text-center text-black max-w-4xl border border-black rounded-lg bg-white/55">
-        Empower your creativity and bring your VR app ideas to life with our
-        intuitive development tools. Get started today and turn your imagination
-        into immersive reality!
-      </p> */}
 
-        <motion.p
-          initial="hidden"
-          whileInView="reveal"
-          transition={{ staggerChildren: 0.1 }}
-          className="mt-10 text-lg text-center text-black max-w-4xl border border-black rounded-lg bg-white/55"
-        >
-          {textChars.map((char, index) => (
-            <motion.span
-              key={index}
-              transition={{ duration: 0.5 }}
-              variants={charVariants}
-            >
-              {char}
-            </motion.span>
-          ))}
-        </motion.p>
-
+        <p className="mt-10 text-lg text-center text-black max-w-4xl border border-black rounded-lg bg-white/55">
+          Empower your creativity and bring your VR app ideas to life with our
+          intuitive development tools. Get started today and turn your
+          imagination into immersive reality!
+        </p>
+        
         <div className="flex justify-center mt-10">
           <a
             href="#"
-            className="bg-gradient-to-r from-orange-500 to-orange-800 py-3 px-4 mx-3 rounded-md"
+            className="bg-gradient-to-r from-orange-500 to-orange-800 py-3 px-4 mx-3 rounded-md hover:scale-105"
           >
-            Start for free
+           Overview
           </a>
-          <a href="#" className="py-3 px-4 mx-3 rounded-md border">
-            Documentation
+          <a href="#" className="py-3 px-4 mx-3 rounded-md border border-gray-500 hover:scale-105">
+            Projects
           </a>
         </div>
       </div>

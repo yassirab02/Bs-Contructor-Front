@@ -1,23 +1,11 @@
 import React from "react";
-import Contact from "./components/Contact";
-import Formule from "./components/Formule";
-import Navbar from "./components/Navbar";
-import Workflow from "./components/Workflow";
-import Reviews from "./components/Reviews";
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
-
+import { RouterProvider } from "react-router-dom";
+import { router } from "./main";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero/>
-      <Workflow/>
-      <Reviews/>  
-      <Contact />
-      <Formule />
-      <Footer/>
+      <RouterProvider router={router} />
     </>
   );
 }

@@ -52,10 +52,10 @@ const Navbar = () => {
                   )}
                 </a>
                 {item.label === "Services" && serviceMenuOpen && (
-                  <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-32 bg-white/55 border border-gray-200 rounded-lg shadow-lg">
+                  <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg">
                     {serviceItems.map((service, idx) => (
-                      <li key={idx} className="px-4 py-2 hover:bg-orange-500 rounded-lg">
-                        <a href={service.href} className="block text-gray-700">{service.label}</a>
+                      <li key={idx} className="px-4 py-2 border-b-2 border-gray-300 hover:bg-orange-500 rounded-lg">
+                        <a href={service.href} className="block text-gray-900">{service.label}</a>
                       </li>
                     ))}
                   </ul>
@@ -65,7 +65,7 @@ const Navbar = () => {
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
             <a
-              href="#"
+              href="/contact"
               className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-8 font-semibold rounded-md"
             >
               Contact
@@ -78,18 +78,18 @@ const Navbar = () => {
           </div>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-gray-500 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+          <div className="fixed mt-3 right-0 z-20 bg-gray-700/95 w-full p-12 flex flex-col justify-center items-center lg:hidden">
             <ul>
               {navItems.map((item, index) => (
-                <li key={index} className="py-4">
+                <li key={index} className="py-2 px-2 rounded-lg hover:bg-orange-500">
                   <a href={item.href}>{item.label}</a>
                 </li>
               ))}
             </ul>
             <div className="flex space-x-6">
               <a
-                href="#"
-                className="py-2 px-8 font-semibold rounded-md bg-gradient-to-r from-orange-500 to-orange-800"
+                href="/contact"
+                className="mt-2 py-2 px-8 font-semibold rounded-md bg-gradient-to-r from-orange-500 to-orange-800"
               >
                 Contact
               </a>

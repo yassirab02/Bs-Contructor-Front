@@ -1,24 +1,25 @@
-import { useRouteError } from "react-router-dom";
-import errorImage from "../assets/error-img.png"; // Make sure to have an SVG file in the mentioned path
-
-export default function ErrorPage() {
-  const error = useRouteError();
-  console.error(error);
-
+export default () => {
   return (
-    <div id="error-page" className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-      <img src={errorImage} alt="Error" className="w-64 h-64 mb-4" />
-      <h1 className="text-4xl font-bold text-red-600 mb-2">Oops!</h1>
-      <p className="text-lg text-gray-700 mb-4">Sorry, an unexpected error has occurred.</p>
-      <p className="text-gray-500">
-        <i>{error.statusText || error.message}</i>
-      </p>
-      <a
-        href="/home"
-        className="mt-6 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition-colors"
-      >
-        Go back to Home
-      </a>
+<section className="bg-white ">
+    <div className="container flex items-center min-h-screen px-6 py-12 mx-auto">
+        <div className="flex flex-col items-center max-w-sm mx-auto text-center">
+            <p className="p-3 text-sm font-medium text-blue-500 rounded-full bg-blue-50">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" className="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                </svg>
+            </p>
+            <h1 className="mt-3 text-2xl font-semibold text-gray-800  md:text-3xl">Page not found</h1>
+            <p className="mt-4 text-gray-500">The page you are looking for doesn't exist. Here are some helpful links:</p>
+
+            <div className="flex items-center w-full mt-6 gap-x-3 shrink-0 sm:w-auto">
+                <a href="/home">
+                <button className="w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg shrink-0 sm:w-auto hover:bg-blue-600">
+                    Take me home
+                </button>
+                </a>
+            </div>
+        </div>
     </div>
-  );
+</section>
+  )
 }
