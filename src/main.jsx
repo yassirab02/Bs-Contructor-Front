@@ -4,25 +4,24 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { lazy } from "react";
 import "./index.css";
-import ErrorPage from "./components/ErrorPage";
-import Workflow from "./components/Workflow";
-import Services from "./components/Services";
-import Contact from "./components/Contact";
-import Layout from "./components/Layout";
-import Home from "./pages/Home";
-import ContactLyout from "./components/ContactLyout";
-import Projects from "./components/Projects";
-import About from "./components/About";
-
+// import './i18n';  // import the i18n configuration
+const ErrorPage = lazy(() => import("./components/ErrorPage"));
+const Workflow = lazy(() => import("./components/Workflow"));
+const Services = lazy(() => import("./components/Services"));
+const Contact = lazy(() => import("./components/Contact"));
+const Layout = lazy(() => import("./components/Layout"));
+const Home = lazy(() => import("./pages/Home"));
+const ContactLayout = lazy(() => import("./components/ContactLyout"));
+const Projects = lazy(() => import("./components/Projects"));
+const About = lazy(() => import("./components/About"));
 
 const router = createBrowserRouter([
-
   {
-    element: <Layout/>,
-    errorElement: <ErrorPage/>,
+    element: <Layout />,
+    errorElement: <ErrorPage />,
     children: [
-
       {
         path: "/workflow",
         element: <Workflow />,
@@ -37,21 +36,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <ContactLyout />,
+        element: <ContactLayout />,
       },
       {
         path: "/projects",
         element: <Projects />,
       },
     ],
-    
   },
   {
     path: "/home",
-    element: <Home/>,
-    errorElement: <ErrorPage/>,
+    element: <Home />,
+    errorElement: <ErrorPage />,
   },
- 
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
