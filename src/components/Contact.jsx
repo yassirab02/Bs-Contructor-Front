@@ -98,14 +98,13 @@ const Contact = () => {
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
           <div className="max-w-lg space-y-3">
-            <h3 className="text-indigo-600 text-4xl font-bold flex justify-center">Contact</h3>
+            <h3 className="text-orange-600 text-4xl font-bold flex justify-center">Contact</h3>
             <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
               Let us know how we can help
             </p>
             <p>
-              We’re here to help and answer any question you might have. We look
-              forward to hearing from you! Please fill out the form, or use the
-              contact information below.
+              We’re here to help you build , find or renovate your house and with any question you might have. We look
+              forward to hearing from you! Please contact us, or fill out the form below.
             </p>
             <div>
               <ul className="mt-6 space-y-6">
@@ -170,7 +169,7 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+                className="w-full px-4 py-2 text-white font-medium bg-gradient-to-r from-orange-500 to-orange-800  hover:bg-orange-500 active:bg-indigo-600 rounded-lg duration-150"
               >
                 Submit
               </button>
@@ -191,7 +190,7 @@ const Contact = () => {
                     />
                   </svg>
                   <h3 className="font-semibold">
-                    Your message was sent successfully!
+                    Your message sent successfully!
                   </h3>
                 </div>
                 <p className="ml-8">

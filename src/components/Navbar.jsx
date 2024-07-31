@@ -64,9 +64,9 @@ const Navbar = () => {
                   )}
                 </a>
                 {item.label === "Services" && serviceMenuOpen && (
-                  <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg">
+                  <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-32 bg-white/85 border border-gray-200 rounded-lg shadow-lg">
                     {serviceItems.map((service, idx) => (
-                      <li key={idx} className="px-4 py-2 border-b-2 border-gray-300 hover:bg-orange-500 rounded-lg">
+                      <li key={idx} className="px-4 py-2 border-b-2 border-gray-500 hover:bg-orange-500 rounded-lg">
                         <a href={service.href} className="block text-gray-900">{service.label}</a>
                       </li>
                     ))}
