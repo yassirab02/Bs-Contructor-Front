@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { lazy } from "react";
 import "./index.css";
+import Blog from "./components/Blog";
 // import './i18n';  // import the i18n configuration
 const ErrorPage = lazy(() => import("./components/ErrorPage"));
 const Workflow = lazy(() => import("./components/Workflow"));
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/projects",
         element: <Projects />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
       },
     ],
   },

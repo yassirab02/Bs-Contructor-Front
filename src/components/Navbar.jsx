@@ -82,22 +82,6 @@ const Navbar = () => {
             >
               Contact
             </a>
-            <div className="relative">
-              <button onClick={toggleLanguageDropdown} className=" p-2 rounded-full hover:bg-gray-300 flex items-center">
-                <GrLanguage className="mr-2" />
-                {currentLanguage}
-              </button>
-              {languageDropdownOpen && (
-                <ul className="absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg">
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={() => changeLanguage("EN")}>
-                    EN
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={() => changeLanguage("FR")}>
-                    FR
-                  </li>
-                </ul>
-              )}
-            </div>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
@@ -121,22 +105,6 @@ const Navbar = () => {
               >
                 Contact
               </a>
-              <div className="relative">
-                <button onClick={toggleLanguageDropdown} className="mt-2 p-2 rounded-full hover:bg-gray-300 flex items-center">
-                  <GrLanguage className="mr-2" />
-                  {currentLanguage}
-                </button>
-                {languageDropdownOpen && (
-                  <ul className="absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={() => changeLanguage("EN")}>
-                      EN
-                    </li>
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={() => changeLanguage("FR")}>
-                      FR
-                    </li>
-                  </ul>
-                )}
-              </div>
             </div>
           </div>
         )}

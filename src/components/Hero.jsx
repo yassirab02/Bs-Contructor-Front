@@ -5,19 +5,12 @@ import { motion } from "framer-motion";
 import { FlipWords } from "./ui/flip-words";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
-// const title1 = "Build your";
-// const title2 = "Dream House";
-// const text =
-//   "transform your web content using framer motion and Empower your creativity and bring your VR app ideas to life with ";
 
 const words = ["Build", "Find", "Renovate"];
 const words2 = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
 `;
 
 const Hero = () => {
-
-  // const headingChars1 = splitStringUsingRegex(title1);
-  // const headingChars2 = splitStringUsingRegex(title2);
 
   return (  
     <>
@@ -31,9 +24,9 @@ const Hero = () => {
         }}
       >
         <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
-          <FlipWords words={words} /> 
+          <FlipWords words={words} />
           <span className="text-black font-[Poppins]">
-            Your Dream House
+            <span> </span>Your Dream House
           </span>
         </h1>
 

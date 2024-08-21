@@ -13,6 +13,7 @@ export const navItems = [
   { label: "Workflow", href: "/workflow" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
 ];
 

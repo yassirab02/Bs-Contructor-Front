@@ -24,7 +24,7 @@ const About = () => {
       if (prevContent.title === "What is BS Constructor") {
         return {
           title: "Our Mission",
-          text: `BS Constructor emphasizes the importance of meeting client needs and expectations by providing tailored solutions, efficient project management, and adherence to international standards.<br /><br /> Their team of experienced professionals works collaboratively to ensure that each project is delivered on time, within budget, and to the highest standards of safety and quality.<br /><br /> Our mission is to deliver high-quality construction services
+          text: `BS Constructor emphasizes the importance of meeting client needs and expectations by providing tailored solutions, efficient project management, and adherence to international standards.<br /><br /> our team of experienced professionals works collaboratively to ensure that each project is delivered on time, within budget, and to the highest standards of safety and quality.<br /><br /> Our mission is to deliver high-quality construction services
                   that exceed client expectations and contribute to the
                   sustainable development of Morocco.<br /> We are committed to
                   innovation, efficiency, and environmental stewardship in all
