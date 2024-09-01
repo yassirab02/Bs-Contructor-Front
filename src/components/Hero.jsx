@@ -5,14 +5,12 @@ import { motion } from "framer-motion";
 import { FlipWords } from "./ui/flip-words";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
-
 const words = ["Build", "Find", "Renovate"];
 const words2 = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
 `;
 
 const Hero = () => {
-
-  return (  
+  return (
     <>
       <div
         className="flex flex-col items-center lg:pt-20 bg-gray-600 pb-80"
@@ -23,10 +21,12 @@ const Hero = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
+        <h1 className="text-6xl mt-8 md:mt-0 sm:text-6xl lg:text-7xl text-center tracking-wide">
           <FlipWords words={words} />
           <span className="text-black font-[Poppins]">
-            <span> </span>Your Dream House
+            <br className="block md:hidden" />{" "}
+            {/* Show on small screens, hide on medium and larger */}
+            Your Dream House
           </span>
         </h1>
 
